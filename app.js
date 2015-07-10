@@ -35,6 +35,14 @@ app.get("/users", function (req,res) {
 	res.json(users);
 });
 
+//read a specific user
+app.get("/users/:id", function (req,res) {
+	console.log(req.params);
+	var id = req.params.id;
+	var user = req.params.id;
+	res.json(users[id-1]);
+});
+
 //create a new user
 app.post("/users", function (req, res) {
 	var newUser = req.body;

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Node App</title>
+
+	<!-- bootstrap css -->
+  <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <!-- custom styles -->
+  <link type="text/css" rel="stylesheet" href="users.css">
+</head>
+<body>
+
+<!-- header -->
+<div class="container">
+	<div class="page-header">
+		<h1>My Node App</h1>
+	</div>
+</div>
+
+<!-- Form to create a new user -->
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<h3>Create a New User</h3>
+			<form class="form-inline" id="new-user">
+			  <input type="text" class="form-control" id="new-username" placeholder="Username" autofocus>
+			  <input type="text" class="form-control" id="new-firstname" placeholder="First Name">
+			  <input type="text" class="form-control" id="new-lastname" placeholder="Last Name">
+			  <input type="text" class="form-control" id="new-age" placeholder="Age">
+			  <input type="submit" class="btn btn-success" value="Add User">
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- Users List -->
+<div class="container">
+	<div class="row">
+		<div class="col-sm-8 col-sm-offset-2" id="users-section">
+		</div>
+	</div>
+</div>
+
+<!-- underscore template for users -->
+<script type="text/template" id="user-template">
+		<!--One User-->
+		<div class="row margin-top-20 user-container">
+			<div class="col-sm-12">
+				<div class="margin-top-20">
+					<span class="bold">Username: </span><span><%= username %></span>
+				</div>
+				<div>
+					<span class="bold">First Name: </span><span><%= firstname %></span>
+				</div>
+				<div>
+					<span class="bold">Last Name: </span><span><%= lastname %></span>
+				</div>
+				<div>
+					<span class="bold">Age: </span><span><%= age %></span>
+				</div>
+				<div class="margin-top-20">
+					<a href="#" class="btn btn-default">Edit Book</a>
+				</div>
+			</div>
+		</div>
+		<!--/One User-->
+	</script>
+
+<script type="text/javascript"></script>
+
+  <!-- jquery cdn-->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+
+  <!-- bootstrap js cdn-->
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+  <!-- underscore cdn-->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+
+  <!-- custom script cdn-->
+  <script type="text/javascript" src="users.js"></script>
+
+</body>
+</html>
